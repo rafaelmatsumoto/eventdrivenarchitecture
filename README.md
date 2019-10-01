@@ -23,7 +23,7 @@ ruby main.rb
 ## Rodar os testes
 
 ```sh
-bin\rspec
+bin/rspec
 ```
 
 ## Autores
