@@ -1,3 +1,1 @@
-class Message
-    
-end
+puts 'Hello world'
