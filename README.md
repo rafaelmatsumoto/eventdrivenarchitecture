@@ -4,11 +4,29 @@
 
 > Aplicação Event Driven Design para disciplina de Arquitetura de Software
 
-## Install
+## Pré-requisitos
 
-- TODO
+- Verificar [wiki](https://github.com/rafaelmatsumoto/eventdrivendesign/wiki) do projeto
 
-## Author
+## Instalação
+
+```sh
+bundle install
+```
+
+## Iniciar aplicação
+
+```sh
+ruby main.rb
+```
+
+## Rodar os testes
+
+```sh
+bin\rspec
+```
+
+## Autores
 
 👤 **Rafael Matsumoto, Dayan Freitas**
 
