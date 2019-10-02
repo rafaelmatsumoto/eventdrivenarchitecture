@@ -2,7 +2,7 @@
 <p>
 </p>
 
-> Aplicação utilizando Event Driven Architecture para disciplina de Arquitetura de Software
+> Aplicação utilizando Event Driven Architecture para a disciplina de Arquitetura de Software
 
 ## Pré-requisitos
 
