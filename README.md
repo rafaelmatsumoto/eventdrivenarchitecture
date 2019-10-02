@@ -14,7 +14,7 @@
 bundle install
 ```
 
-## Iniciar aplicação
+## Iniciar a aplicação
 
 ```sh
 ruby main.rb
