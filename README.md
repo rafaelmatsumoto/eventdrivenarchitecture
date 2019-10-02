@@ -1,8 +1,8 @@
-<h1 align="center">Welcome to Event Driven Design 👋</h1>
+<h1 align="center">Welcome to Event Driven Architecture 👋</h1>
 <p>
 </p>
 
-> Aplicação Event Driven Design para disciplina de Arquitetura de Software
+> Aplicação utilizando Event Driven Architecture para disciplina de Arquitetura de Software
 
 ## Pré-requisitos
 
