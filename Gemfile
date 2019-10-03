@@ -6,6 +6,8 @@ gem 'google-cloud-pubsub'
 
 gem 'dotenv'
 
+gem 'mail'
+
 group :development do
     gem 'pry', '~> 0.12.2'
 end

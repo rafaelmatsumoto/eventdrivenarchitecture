@@ -1,14 +1,24 @@
 require 'dotenv/load'
+require 'mail'
 require "google/cloud/pubsub"
 project_id = "block-design-54210"
 subscription_name = "simple-sub"
 key_file = ENV['GCLOUD_KEY']
 
+Mail.defaults do
+  delivery_method :smtp, address: "localhost", port: 1025
+end
+
 pubsub = Google::Cloud::Pubsub.new project: project_id, keyfile: key_file
 
 subscription = pubsub.subscription subscription_name
 subscriber   = subscription.listen do |received_message|
-  puts "Received message: #{received_message.data}"
+  Mail.deliver do
+    from     'mkt@superapontador.com'
+    to       received_message.data
+    subject  'Super apontador'
+    body     'Obrigado por demonstrar interesse no super apontador, no momento o produto está em falta'
+  end
   received_message.acknowledge!
 end
 

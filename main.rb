@@ -8,9 +8,7 @@ topic_name = "simple-topic"
 pubsub = Google::Cloud::Pubsub.new project: project_id, keyfile: key_file
 
 topic = pubsub.topic topic_name
-20.times do
-    topic.publish Faker::Movie.quote
-end
+topic.publish 'rafael@teste.com'
 
 puts "Messages published."
 
