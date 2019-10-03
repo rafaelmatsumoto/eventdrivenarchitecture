@@ -1,7 +1,7 @@
 require 'dotenv/load'
 require 'mail'
 require "google/cloud/pubsub"
-project_id = "block-design-54210"
+project_id = ENV['GCLOUD_PROJECT_ID']
 subscription_name = "simple-sub"
 key_file = ENV['GCLOUD_KEY']
 
