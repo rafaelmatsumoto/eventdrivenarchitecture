@@ -2,7 +2,7 @@
 <p>
 </p>
 
-> Aplicação utilizando Event Driven Architecture para a disciplina de Arquitetura de Software
+> Aplicação que utiliza o serviço Google Pub/Sub para envio de e-mails, seguindo o modelo Event Driven Architecture
 
 ## Pré-requisitos
 
