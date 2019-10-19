@@ -1,3 +1,5 @@
 language: ruby
 install: bundle install --binstubs
-script: bin/rspec
+script: 
+  - bundle exec rubocop
+  - bin/rspec

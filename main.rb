@@ -1,14 +1,15 @@
-require 'dotenv/load'
-require "google/cloud/pubsub"
-require "faker"
-project_id = ENV['GCLOUD_PROJECT_ID']
-key_file = ENV['GCLOUD_KEY']
-topic_name = "simple-topic"
+# frozen_string_literal: true
 
-pubsub = Google::Cloud::Pubsub.new project: project_id, keyfile: key_file
+require 'dotenv/load'
+require './lib/publisher'
+require 'faker'
+topic_name = 'simple-topic'
+
+pubsub = Publisher.get_publisher
 
 topic = pubsub.topic topic_name
-topic.publish 'rafael@teste.com'
+20.times do
+  topic.publish Faker::Internet.email
+end
 
-puts "Messages published."
-
+puts 'Messages published.'
