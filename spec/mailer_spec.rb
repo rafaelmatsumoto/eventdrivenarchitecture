@@ -19,5 +19,4 @@ describe "sending an email" do
 
   it { is_expected.to have_sent_email.matching_subject(/Slimcard?/) }
   it { is_expected.to have_sent_email.matching_body(/Test(ing)?/) }
-
 end

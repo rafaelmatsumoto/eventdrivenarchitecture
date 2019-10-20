@@ -3,7 +3,7 @@
 require 'logger'
 require './lib/publisher'
 require './lib/mailer'
-subscription_name = 'simple-sub'
+subscription_name = 'lead-sub'
 
 logger = Logger.new(STDOUT)
 
