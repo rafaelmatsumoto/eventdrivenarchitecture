@@ -2,6 +2,7 @@
 
 require 'logger'
 require './lib/publisher'
+require './lib/mailer'
 subscription_name = 'simple-sub'
 
 logger = Logger.new(STDOUT)
@@ -10,7 +11,9 @@ pubsub = Publisher.get_publisher
 
 subscription = pubsub.subscription subscription_name
 subscriber   = subscription.listen do |received_message|
-  logger.info(received_message.data)
+  lead = JSON.parse(received_message.data)
+  logger.info(lead)
+  Mailer.mail(lead["email"])
   received_message.acknowledge!
 end
 
