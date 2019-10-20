@@ -13,7 +13,7 @@ subscription = pubsub.subscription subscription_name
 subscriber   = subscription.listen do |received_message|
   lead = JSON.parse(received_message.data)
   logger.info(lead)
-  Mailer.mail(lead["email"])
+  Mailer.mail(lead)
   received_message.acknowledge!
 end
 

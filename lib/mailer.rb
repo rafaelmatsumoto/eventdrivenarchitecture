@@ -5,13 +5,13 @@ Mail.defaults do
 end
 
 class Mailer
-  def self.mail(lead_email)
+  def self.mail(lead)
     Mail.deliver do
       from 'mkt@slimcard.com'
-      to lead_email
+      to lead["email"]
       charset = "UTF-8"
       subject  'Slimcard'
-      body     'Obrigado por demonstrar interesse no slim card, o sistema está realizando uma análise de crédito'
+      body     "Obrigado #{lead["name"]} por demonstrar interesse no slim card, o sistema está realizando uma análise de crédito"
     end
   end
 end
